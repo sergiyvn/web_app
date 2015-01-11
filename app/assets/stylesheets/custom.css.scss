@@ -43,13 +43,6 @@ textarea {
   }
 }
 
-.right {
-  text-align: right;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -204,8 +197,8 @@ input {
 }
 
 .field_with_errors {
-  @extend .control-group;
-  @extend .error;
+//  @extend .control-group;
+//  @extend .error;
 }
 
 /* Users index */
