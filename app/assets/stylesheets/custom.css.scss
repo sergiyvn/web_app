@@ -1,8 +1,16 @@
-@import "bootstrap";
+@import "bootstrap-sprockets", "bootstrap";
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+a:link, a:visited, a:hover, a:focus, a:active {
+  outline: none;
+}
+
+.btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active {
+  outline: none;
+}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -30,6 +38,13 @@ textarea {
 
 .center {
   text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.right {
+  text-align: right;
   h1 {
     margin-bottom: 10px;
   }
@@ -66,6 +81,10 @@ p {
 /* header */
 
 #logo {
+  a:active, a:focus{
+    text-underline: none;
+    text-decoration: none;
+  }
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -73,11 +92,37 @@ p {
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
+  padding-bottom: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
     color: white;
     text-decoration: none;
+  }
+}
+
+header {
+  .nav-but {
+    color: #bbb;
+    border: none;
+    margin: 4px;
+    &:hover, &:active, &:focus {
+      color: white;
+    }
+  }
+  .dropdown-menu {
+    background: rgba(0, 0, 0, 0.6);
+    a:link, a:visited, a:hover, a:focus, a:active {
+      color: #ccc;
+    }
+    .divider {
+      background-color: black;
+    }
+    > li > a:hover, a:focus {
+      background: none;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
