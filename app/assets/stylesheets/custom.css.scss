@@ -8,7 +8,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
   outline: none;
 }
 
-.btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active, .active.btn:focus {
+.btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active, .active.btn:focus, .btn:focus:active, {
   outline: none;
 }
 
@@ -54,6 +54,8 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #000000;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 1); //тынь для тексту
 }
 
 h2 {
@@ -100,6 +102,7 @@ body {
 }
 
 header {
+  background-color: rgba(0,0,0,0.5);
   .nav-but {
     color: #bbb;
     border: none;
@@ -153,7 +156,7 @@ footer {
 /* main Container */
 
 .main{
-  background-color: #ffffff;
+  background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
 }
 
