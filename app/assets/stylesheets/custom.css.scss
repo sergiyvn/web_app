@@ -67,6 +67,15 @@ h2 {
   color: $gray-light;
 }
 
+h3 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 25px;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -102,6 +111,7 @@ body {
 }
 
 header {
+  height: 45px;
   background-color: rgba(0,0,0,0.5);
   .nav-but {
     color: #bbb;
@@ -153,11 +163,20 @@ footer {
   }
 }
 
-/* main Container */
+/* main container */
 
-.main{
+.main-container {
   background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
+  margin-top: 50px;
+}
+
+.menu-container {
+  margin-top: 45px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* sidebar */
@@ -197,6 +216,10 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+label, p {
+  color: #ffffff;
 }
 
 input {

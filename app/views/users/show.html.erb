@@ -1,11 +1,20 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<aside class="span4">
+  <!--<section>-->
+    <h3>
+      <%= gravatar_for @user %>
+      <%= @user.name %>
+      <% if current_user.admin? %>
+        <br>
+        <%= @user.email %>
+      <% end %>
+    </h3>
+<% if current_user.admin? %>
+  <%= link_to "Редагувати", edit_user_path(@user) %>
+<% end %>
+<% if current_user.admin? && !current_user?(@user) %>
+  | <%= link_to "Видалити", @user, method: :delete,
+                data: { confirm: "Ви впевненi що хочете видалити користувача?" } %>
+<% end %>
+  <!--</section>-->
+</aside>

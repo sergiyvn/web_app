@@ -1,45 +1,45 @@
 <header class="navbar-fixed-top">
     <div class="container">
-      <%= link_to "Web Shop", root_path, id: "logo" %>
+      <%= link_to "Авто акустика", root_path, id: "logo" %>
       <div class="pull-right">
         <%= link_to root_path, class: 'btn nav-but' do %>
-            <i class="glyphicon glyphicon-home"></i> Главная
+            <i class="glyphicon glyphicon-home"></i> Головна
         <% end %>
         <%= link_to about_path, class: 'btn nav-but' do %>
-            <i class="glyphicon glyphicon-book"></i> О магазине
+            <i class="glyphicon glyphicon-book"></i> Про магазин
         <% end %>
         <%= link_to contact_path, class: 'btn nav-but' do %>
-            <i class="glyphicon glyphicon-envelope"></i> Контакты
+            <i class="glyphicon glyphicon-envelope"></i> Контакти
         <% end %>
         <%= link_to help_path, class: 'btn nav-but' do %>
-            <i class="glyphicon glyphicon-question-sign"></i> Помощь
+            <i class="glyphicon glyphicon-question-sign"></i> Допомога
         <% end %>
 
 
       <% if signed_in? %>
             <% if current_user.admin? %>
                 <%= link_to users_path, class: 'btn nav-but' do %>
-                    <i class="glyphicon glyphicon-user"></i> Пользователи
+                    <i class="glyphicon glyphicon-user"></i> Користувачi
                 <% end %>
              <% end %>
 
             <div class="btn-group">
               <a href="#" class="dropdown-toggle btn nav-but" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i> Аккаунт <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li><%= link_to "Профiль", current_user %></li>
+                <li><%= link_to "Налаштування", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                  <%= link_to "Вихiд", signout_path, method: "delete" %>
                 </li>
               </ul>
             </div>
       <% else %>
         <div class="btn-group">
-          <a href="#" class="dropdown-toggle btn nav-but" data-toggle="dropdown"><i class="glyphicon glyphicon-hand-right"></i> Войти <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle btn nav-but" data-toggle="dropdown"><i class="glyphicon glyphicon-hand-right"></i> Увiйти <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Войти", signin_path %></li>
-            <li><%= link_to "Регистрация", signup_path %></li>
+            <li><%= link_to "Увiйти", signin_path %></li>
+            <li><%= link_to "Реєстрацiя", signup_path %></li>
           </ul>
         </div>
       <% end %>

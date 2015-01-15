@@ -15,8 +15,9 @@ gem 'turbolinks', '2.5.3'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'faker', '1.1.2'                    #заполнитель образцов данных / the sample data populator
-gem 'will_paginate', '3.0.4'            #for pagination
-gem 'bootstrap-will_paginate', '0.0.9'  #for pagination
+gem 'will_paginate'            #for pagination
+gem 'bootstrap-will_paginate'  #for pagination
+gem 'mysql2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
